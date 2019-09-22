@@ -61,19 +61,5 @@ public class AddressEncoderControllerTests {
 
 	}
 
-	// Stress Test
-
-	// Edge cases
-	// 1. Incorect answer.
-	// 2. More than one correct answer.
-	// 3. Zero locations found.
-	// 4. Spring data
-	// 5. Dependency injection/
-	// 6. Encode url test.
-	// 7. Invalid Key
-
-	// Integration test
-	// 1. Check if status 200ok from website.
-	// 2. Check if response structure is valid on valid api call.
 
 }
