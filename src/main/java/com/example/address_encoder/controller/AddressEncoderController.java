@@ -17,6 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.address_encoder.model.GeoCoordinates;
 import com.example.address_encoder.service.AddressEncoderService;
 
+
+/**
+ * 
+ * Address Encoder controller class that handles encoding/decoding of full addresses to
+ * geo coordinates using an address encoding service object. 
+ * Also maintains the rate limiting per address using a Map object. 
+ * 
+ * @author cris
+ *
+ */
 @RestController
 public class AddressEncoderController {
 
@@ -31,6 +41,17 @@ public class AddressEncoderController {
 		this.addressEncoderService = addressEncoderService;
 	}
 
+	/**
+	 * 
+	 * Controller method to encode the address given as input.
+	 * Returns a json object with GeoCoordinates or a message indicating an error 
+	 * or resource limits reached. 
+	 * Enforces the rate limiting by address.
+	 * 
+	 * @param inputAddress
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping("/encode")
 	public ResponseEntity<?> encode(@RequestParam(value = "address") String inputAddress) throws IOException {
 		addressMap.merge(inputAddress, 0, (v1, v2) -> v1 + 1);

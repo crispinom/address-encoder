@@ -1,7 +1,10 @@
+
 package com.example.address_encoder;
+
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,6 +28,7 @@ public class AddressEncoderIntegrationTests {
 
 
 	@Test
+	@Ignore
 	public void testGeoCoordinateServiceUp() throws Exception {
 		
 		ResponseEntity<GeoCoordinates> response = restTemplate.exchange("http://localhost:" + port + "/encode?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA", HttpMethod.GET,

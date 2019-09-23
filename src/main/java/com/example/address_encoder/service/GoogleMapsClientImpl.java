@@ -18,6 +18,14 @@ import com.example.address_encoder.model.GeoCoordinates;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * 
+ * Google Maps implementations of Address encoding service. 
+ *  
+ * @author cris
+ *
+ */
+
 @Component
 public class GoogleMapsClientImpl implements AddressEncoderService {
 

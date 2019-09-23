@@ -1,5 +1,13 @@
 package com.example.address_encoder.model;
 
+
+/**
+ * 
+ * Object to hold geo coordinates latitude and longtitude.
+ * 
+ * @author cris
+ *
+ */
 public class GeoCoordinates {
 
 	private double latitude;

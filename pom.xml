@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>address-encoder</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>address-encoder</name>
 	<description>Demo project for Geo Encoding using Spring Boot</description>
 
